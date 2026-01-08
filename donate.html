@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Purple Love Charity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div></div> 
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="causes.html">Causes</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <div class="page-header" style="background-image: url('assets/purple-heart-1.jpg');">
+        <h1>Support The Work</h1>
+        <div class="breadcrumb"><a href="index.html">Home</a> > Donate</div>
+    </div>
+
+    <div class="container" style="padding: 60px 20px;">
+        <div class="payment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+            
+            <div class="payment-card" style="background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <h2 style="color: var(--primary-color); margin-bottom: 15px;"><i class="fas fa-university"></i> Bank Transfer</h2>
+                <p style="margin-bottom: 20px;">Tap the account number to copy it. Please send proof of payment to our email.</p>
+                
+                <div class="account-box">
+                    <p>
+                        <span style="font-weight:bold; color:#555;">Bank:</span> UBA<br>
+                        <span style="font-weight:bold; color:#555;">Name:</span> Purple Love Charity Foundation<br>
+                        <span style="font-weight:bold; color:#555;">Number:</span> 
+                        <span class="clickable-acct" onclick="navigator.clipboard.writeText('1020304050'); alert('Account Number Copied!')">1020304050</span>
+                    </p>
+                </div>
+
+                <div class="account-box">
+                    <p>
+                        <span style="font-weight:bold; color:#555;">Bank:</span> OPay / Paycom<br>
+                        <span style="font-weight:bold; color:#555;">Name:</span> Purple Heart Admin<br>
+                        <span style="font-weight:bold; color:#555;">Number:</span> 
+                        <span class="clickable-acct" onclick="navigator.clipboard.writeText('8012345678'); alert('Account Number Copied!')">8012345678</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="payment-card" style="background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <h2 style="color: var(--primary-color); margin-bottom: 15px;"><i class="fas fa-credit-card"></i> Online Donation</h2>
+                <p>Secure payment via Debit/Credit Card.</p>
+                
+                <form id="paymentForm" style="margin-top: 25px;">
+                    <label>Select Currency</label>
+                    <select id="currency">
+                        <option value="NGN" selected>🇳🇬 Naira (NGN)</option>
+                        <option value="USD">🇺🇸 US Dollar (USD)</option>
+                        <option value="GBP">🇬🇧 British Pound (GBP)</option>
+                    </select>
+                    <label>Amount</label>
+                    <input type="number" id="amount" placeholder="e.g. 5000" required>
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="sponsor@email.com" required>
+                    <label>Full Name</label>
+                    <input type="text" id="fullname" placeholder="Your Name" required>
+
+                    <button type="submit" class="pay-btn" onclick="payWithPaystack(event)">
+                        Donate Now <i class="fas fa-heart"></i>
+                    </button>
+                </form>
+                <div style="text-align: center; margin-top: 20px; opacity: 0.7;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Paystack_Logo.png" width="100" alt="Secured by Paystack" style="margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Purple Love Charity Foundation. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/purplelovecharityfoundation/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

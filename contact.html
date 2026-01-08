@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Purple Love Charity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div></div> 
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="causes.html">Causes</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <div class="page-header" style="background-image: url('assets/purple-heart-1.jpg');">
+        <h1>Get in Touch</h1>
+        <div class="breadcrumb"><a href="index.html">Home</a> > Contact</div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px;">
+                
+                <div>
+                    <h2 style="color: var(--primary-color); margin-bottom: 20px;">We'd Love to Hear from You</h2>
+                    <p>Whether you want to become a partner, volunteer, or request support, please reach out to us.</p>
+                    
+                    <div style="margin-top: 30px;">
+                        <p style="margin-bottom: 25px; font-size: 1.1rem; display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent-color); font-size: 1.5rem;"></i>
+                            <span><strong>Address:</strong><br> Lagos, Nigeria.</span>
+                        </p>
+                        <p style="margin-bottom: 25px; font-size: 1.1rem; display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-envelope" style="color: var(--accent-color); font-size: 1.5rem;"></i>
+                            <span><strong>Email:</strong><br> purplelovecharityfoundation@gmail.com</span>
+                        </p>
+                        <p style="margin-bottom: 25px; font-size: 1.1rem; display: flex; align-items: center; gap: 15px;">
+                            <i class="fab fa-whatsapp" style="color: var(--accent-color); font-size: 1.8rem;"></i>
+                            <span><strong>WhatsApp / Phone:</strong><br> 
+                                <a href="https://wa.me/message/T525XBO3ARUTG1" target="_blank" style="color: var(--primary-color); text-decoration: underline;">+234 707 581 9907</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <form id="contactForm" class="contact-form" style="background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+                        
+                        <div style="display:none; visibility:hidden;">
+                            <label>Don't fill this out if you're human:</label>
+                            <input type="text" name="bot_check" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <label>Your Name</label>
+                        <input type="text" name="fullName" placeholder="Enter your full name" required>
+                        
+                        <label>Your Email</label>
+                        <input type="email" name="email" placeholder="example@email.com" required>
+
+                        <label>Subject</label>
+                        <select class="form-select" name="subject">
+                            <option>General Inquiry</option>
+                            <option>Sponsorship / Donation</option>
+                            <option>Request for Help</option>
+                            <option>Volunteering</option>
+                        </select>
+                        
+                        <label>Message</label>
+                        <textarea name="message" placeholder="How can we help you today?" rows="5" required></textarea>
+                        
+                        <div id="formStatus"></div>
+
+                        <button type="submit" id="submitBtn" class="submit-btn">
+                            Send Message <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Purple Love Charity Foundation. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/purplelovecharityfoundation/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
